@@ -21,7 +21,7 @@ sudo update-initramfs -u #only on Ubuntu 16.04 or newer
 sudo rmmod dvb_usb_rtl28xxu 
 
 #Download OpenWebRX and libcsdr (subdirectories will be created under the current directory).
-git clone https://github.com/simonyiszk/openwebrx.git
+git clone https://github.com/cptechnik/openwebrx.git
 git clone https://github.com/simonyiszk/csdr.git
 
 #Compile libcsdr (which is a dependency of OpenWebRX)
@@ -33,5 +33,6 @@ sudo make install
 nano ../openwebrx/config_webrx.py 
 
 #Run OpenWebRX
+
 cd ../openwebrx
 ./openwebrx.py
