@@ -22,7 +22,7 @@ sudo rmmod dvb_usb_rtl28xxu
 
 #Download OpenWebRX and libcsdr (subdirectories will be created under the current directory).
 git clone https://github.com/cptechnik/openwebrx.git
-git clone https://github.com/simonyiszk/csdr.git
+git clone https://github.com/cptechnik/csdr.git
 
 #Compile libcsdr (which is a dependency of OpenWebRX)
 cd csdr
