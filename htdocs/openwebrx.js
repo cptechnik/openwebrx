@@ -155,7 +155,7 @@ function zoomOutOneStep () { zoom_set(zoom_level-1); }
 function zoomInTotal ()    { zoom_set(zoom_levels.length-1); }
 function zoomOutTotal ()   { zoom_set(0); }
 function setSquelchDefault() { e("openwebrx-panel-squelch").value=0; }
-function setSquelchToAuto() { e("openwebrx-panel-squelch").value=(getLogSmeterValue(smeter_level)+10).toString(); updateSquelch(); }
+function setSquelchToAuto() { e("openwebrx-panel-squelch").value=(getLogSmeterValue(smeter_level)+5).toString(); updateSquelch(); }
 function updateSquelch()
 {
 	var sliderValue=parseInt(e("openwebrx-panel-squelch").value);
