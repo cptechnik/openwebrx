@@ -2,7 +2,8 @@
 sudo apt-get install build-essential git libfftw3-dev cmake libusb-1.0-0-dev
 
 #Fetch and build rtl-sdr, skip if already done (subdirectories will be created under the current directory).
-git clone git://git.osmocom.org/rtl-sdr.git
+git clone https://github.com/rtlsdrblog/rtl-sdr-blog
+#instead of 'git clone git://git.osmocom.org/rtl-sdr.git' , because, i have a rtl-sdrv3 Stick with bias-tee
 cd rtl-sdr/
 mkdir build
 cd build
