@@ -1229,15 +1229,15 @@ function on_ws_recv(evt)
 						break;
 					case "audio_compression":
 						audio_compression=param[1];
-						divlog( "Audio stream is "+ ((audio_compression=="adpcm")?"compressed":"uncompressed")+"." )
+						divlog( "Audio is "+ ((audio_compression=="adpcm")?"compressed":"uncompressed")+"." )
 						break;
 					case "fft_compression":
 						fft_compression=param[1];
-						divlog( "FFT stream is "+ ((fft_compression=="adpcm")?"compressed":"uncompressed")+"." )
+						divlog( "FFT is "+ ((fft_compression=="adpcm")?"compressed":"uncompressed")+"." )
 						break;
 					case "cpu_usage":
 						var server_cpu_usage=parseInt(param[1]);
-						progressbar_set(e("openwebrx-bar-server-cpu"),server_cpu_usage/100,"Server CPU ["+param[1]+"%]",server_cpu_usage>85);
+						progressbar_set(e("openwebrx-bar-server-cpu"),server_cpu_usage/100,"CPU ["+param[1]+"%]",server_cpu_usage>85);
 						break;
 					case "clients":
 						var clients_num=parseInt(param[1]);
@@ -1472,14 +1472,14 @@ function audio_buffer_progressbar_update()
 	var overrun=audio_buffer_value>audio_buffer_maximal_length_sec;
 	var underrun=audio_prepared_buffers.length==0;
 	var text="buffer";
-	if(overrun) { text="overrun"; console.log("audio overrun, "+(++audio_overrun_cnt).toString()); }
-	if(underrun) { text="underrun"; console.log("audio underrun, "+(++audio_underrun_cnt).toString()); }
+	if(overrun) { text="overrun"; console.log("A overrun, "+(++audio_overrun_cnt).toString()); }
+	if(underrun) { text="underrun"; console.log("A underrun, "+(++audio_underrun_cnt).toString()); }
 	if(overrun||underrun)
 	{
 		audio_buffer_progressbar_update_disabled=true;
 		window.setTimeout(function(){audio_buffer_progressbar_update_disabled=false; audio_buffer_progressbar_update();},1000);
 	}
-	progressbar_set(e("openwebrx-bar-audio-buffer"),(underrun)?1:audio_buffer_value/1.5,"Audio "+text+" ["+(audio_buffer_value).toFixed(1)+" s]",overrun||underrun||audio_buffer_value<0.25);
+	progressbar_set(e("openwebrx-bar-audio-buffer"),(underrun)?1:audio_buffer_value/1.5,"A "+text+" ["+(audio_buffer_value).toFixed(1)+" s]",overrun||underrun||audio_buffer_value<0.25);
 }
 
 
