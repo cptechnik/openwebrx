@@ -101,14 +101,14 @@
                             onclick="demodulator_analog_replace('usb');">USB</div>
                         <div class="openwebrx-button openwebrx-demodulator-button" id="openwebrx-button-cw"
                             onclick="demodulator_analog_replace('cw');">CW</div>
-                    </div>
+                    </div><!--
                     <div class="openwebrx-panel-line">
                         <div class="openwebrx-button openwebrx-demodulator-button" id="openwebrx-button-dig" onclick="demodulator_digital_replace_last();">DIG</div>
                         <select id="openwebrx-secondary-demod-listbox" onchange="secondary_demod_listbox_changed();">
                             <option value="none"></option>
                             <option value="bpsk31">BPSK31</option>
                         </select>
-                    </div>
+                    </div>-->
                     <div class="openwebrx-panel-line">
                         <div title="Mute on/off" id="openwebrx-mute-off" class="openwebrx-button" onclick="toggleMute();"><img src="gfx/openwebrx-speaker.png" class="openwebrx-sliderbtn-img" id="openwebrx-mute-img"></div>
                         <input title="Volume" id="openwebrx-panel-volume" class="openwebrx-panel-slider" type="range" min="0" max="150" value="50" step="1" onchange="updateVolume()" oninput="updateVolume()">
